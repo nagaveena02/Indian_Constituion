@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<style>
+h1{
+text-align:center;
+}
+body { font-family: Arial, Helvetica, sans-serif;}
+form {
+margin-left:38%;
+position: absolute;
+margin-top: 5%;
+border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 16px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+h1{
+text-align:center;
+}
+
+button {
+  background-color: darkblue;
+  font-size:130%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 16px;
+  background-color:lightgrey ;
+}
+</style>
+<title>Registration</title>
+</head>
+<body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<h1> <font   size ="6"> REGISTRATION</font> </h1>
+<form th:action="registration"  method="post">
+<div class ="container">
+           <div>
+                <label>User Name</label>
+                <input type ="text" id ="uname"  class="form-control" name="uname"  pattern="{a-z},{A-Z}"required>
+           
+           </div>
+           <div>
+                <label>Email</label>
+                <input type ="email" id ="email" class="form-control" name="email" required>
+           
+           </div>
+           <br>
+           <div>
+                <label for="number">Phone Number</label>
+                <input type ="tel" id ="number"  class="form-control" name="number" pattern="{9}" required>
+           
+           </div>
+        <br>
+           <div>
+                <label for ="psw">Password</label>
+                <input type ="password" id ="password"  class="form-control" name="password" required>
+    </div>
+    <button type="submit">Register</button>
+           
+           </form>
+     
+     </div>
+
+
+</div>
+</body>
+</html>
